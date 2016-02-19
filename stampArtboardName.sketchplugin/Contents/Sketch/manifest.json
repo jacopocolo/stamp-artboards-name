@@ -1,0 +1,39 @@
+{
+  "author" : "",
+  "commands" : [
+    {
+      "script" : "script.js",
+      "handler" : "stampArtboardName",
+      "shortcut" : "",
+      "name" : "1. Add artboard names",
+      "identifier" : "addArtboardName"
+    },
+    {
+      "script" : "script.js",
+      "handler" : "hideArtboardNames",
+      "shortcut" : "",
+      "name" : "2. Hide artboard names ",
+      "identifier" : "hideArtboardName"
+    },
+    {
+      "script" : "script.js",
+      "handler" : "showArtboardNames",
+      "shortcut" : "",
+      "name" : "3. Show artboard names",
+      "identifier" : "showArtboardName"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "addArtboardName",
+      "hideArtboardName",
+      "showArtboardName"
+    ],
+    "title" : "stamp Artboard Name"
+  },
+  "identifier" : "com.example.sketch.stampArtboardName",
+  "version" : "0.0.1",
+  "description" : "",
+  "authorEmail" : "",
+  "name" : "test"
+}
