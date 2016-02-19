@@ -57,6 +57,29 @@ function jsArray(array) {
   return jsArray;
 }
 
+//find artboard with name
+function getArtboardWithName(name) {
+  var artboards = jsArray([doc artboards]);
+  for(var i = 0; i < artboards.length; i++) {
+      var artboard = artboards[i];
+      //if page matches name
+      if([artboard name] == name) {
+        return artboard;
+      }
+  }
+  return;
+}
+
+//find layer based on layer name and artboard name
+function getLayerWithName(layerName, artboardName) {
+  var all_layers = getArtboardWithName(artboardName).layers();
+    for (x = 0; x < [all_layers count]; x++) {
+      if (all_layers.objectAtIndex(x).name() == layerName) {
+        return all_layers.objectAtIndex(x);
+    }
+  }
+}
+
 function hideArtboardNames(context) {
 
   ctx = context;
@@ -99,6 +122,23 @@ function showArtboardNames(context) {
           }
         }
   }
+}
+
+function updateArtboardNames(context) {
+
+  ctx = context;
+  doc = context.document;
+  selection = context.selection;
+  page = [doc currentPage];
+  view = [doc currentView];
+  artboards = [[doc currentPage] artboards];
+
+  var artboards = jsArray([doc artboards]);
+  	for(var i = 0; i < artboards.length; i++) {
+  	  	var artboard = artboards[i];
+        var label = getLayerWithName("Artboard_name", artboard.name());
+          label.setStringValue(artboard.name());
+  	}
 }
 
 // var onRun = function(context) {

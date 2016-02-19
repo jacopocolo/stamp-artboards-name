@@ -21,19 +21,27 @@
       "shortcut" : "",
       "name" : "3. Show artboard names",
       "identifier" : "showArtboardName"
+    },
+    {
+      "script" : "script.js",
+      "handler" : "updateArtboardNames",
+      "shortcut" : "",
+      "name" : "4. Update artboard names",
+      "identifier" : "updateArtboardName"
     }
   ],
   "menu" : {
     "items" : [
       "addArtboardName",
       "hideArtboardName",
-      "showArtboardName"
+      "showArtboardName",
+      "updateArtboardName"
     ],
-    "title" : "stamp Artboard Name"
+    "title" : "Stamp Artboard Name"
   },
   "identifier" : "com.example.sketch.stampArtboardName",
   "version" : "0.0.1",
   "description" : "",
   "authorEmail" : "",
-  "name" : "test"
+  "name" : "Stamp artboard name"
 }
