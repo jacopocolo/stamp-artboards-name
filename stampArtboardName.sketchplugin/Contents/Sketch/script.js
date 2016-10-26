@@ -30,19 +30,22 @@ function stampArtboardName(context) {
         shape.setName("Artboard_name_label");
         var fill = shape.style().addStylePartOfType(0);
         fill.color = MSColor.colorWithSVGString("#ffff00");
+        shape.setIsLocked(true);
         artboard.addLayers([shape]);
 
         //artboard name
-        var artboardName = artboard.addLayerOfType("text");
-        artboardName.textColor = MSColor.colorWithSVGString("#727475");
+        var artboardName = MSTextLayer.new();
+        artboardName.textColor = MSColor.colorWithSVGString("#000000");
         artboardName.fontSize = 12;
-        artboardName.setFontPostscriptName("Arial");
         artboardName.setName("Artboard_name");
         artboardName.setNameIsFixed(true);
         artboardName.setStringValue(artboard.name());
         artboardName.frame().setX(5);
         artboardName.frame().setY(5);
-        //artboardName.setIsLocked(true);
+        artboardName.frame().setWidth(artboard.name().length()*7);
+        artboardName.frame().setHeight(15);
+        artboard.addLayers([artboardName]);
+        artboardName.setIsLocked(true);
   	}
 }
 
@@ -140,12 +143,3 @@ function updateArtboardNames(context) {
           label.setStringValue(artboard.name());
   	}
 }
-
-// var onRun = function(context) {
-//   ctx = context;
-//   doc = context.document;
-//   selection = context.selection;
-//   page = [doc currentPage];
-//   view = [doc currentView];
-//   artboards = [[doc currentPage] artboards];
-// };
