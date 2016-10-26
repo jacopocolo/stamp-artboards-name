@@ -28,7 +28,7 @@ function stampArtboardName(context) {
         path.closePath();
         var shape = MSShapeGroup.shapeWithBezierPath(path);
         shape.setName("Artboard_name_label");
-        var fill = shape.style().fills().addNewStylePart();
+        var fill = shape.style().addStylePartOfType(0);
         fill.color = MSColor.colorWithSVGString("#ffff00");
         artboard.addLayers([shape]);
 
