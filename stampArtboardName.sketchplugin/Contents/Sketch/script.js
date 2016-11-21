@@ -29,13 +29,13 @@ function stampArtboardName(context) {
         var shape = MSShapeGroup.shapeWithBezierPath(path);
         shape.setName("Artboard_name_label");
         var fill = shape.style().addStylePartOfType(0);
-        fill.color = MSColor.colorWithSVGString("#ffff00");
+        fill.color = MSImmutableColor.colorWithSVGString("#ffff00");
         shape.setIsLocked(true);
         artboard.addLayers([shape]);
 
         //artboard name
         var artboardName = MSTextLayer.new();
-        artboardName.textColor = MSColor.colorWithSVGString("#000000");
+        artboardName.textColor = MSImmutableColor.colorWithSVGString("#000000");
         artboardName.fontSize = 12;
         artboardName.setName("Artboard_name");
         artboardName.setNameIsFixed(true);
