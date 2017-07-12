@@ -143,3 +143,25 @@ function updateArtboardNames(context) {
           label.setStringValue(artboard.name());
   	}
 }
+
+function deleteArtboardNames(context) {
+  ctx = context;
+  doc = context.document;
+  selection = context.selection;
+  page = [doc currentPage];
+  view = [doc currentView];
+  artboards = [[doc currentPage] artboards];
+
+  var artboards = jsArray([doc artboards]);
+  	for(var i = 0; i < artboards.length; i++) {
+  	  	var artboard = artboards[i];
+
+        var all_layers = artboard.layers();
+          for (x = 0; x < [all_layers count]; x++) {
+            if (all_layers.objectAtIndex(x).name() == "Artboard_name" || all_layers.objectAtIndex(x).name() == "Artboard_name_label") {
+              all_layers.removeObjectAtIndex(x)  
+              all_layers.objectAtIndex(x).removeFromParent()
+          }
+        }
+  }
+}
