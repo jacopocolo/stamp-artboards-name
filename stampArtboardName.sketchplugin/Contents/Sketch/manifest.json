@@ -28,6 +28,12 @@
       "shortcut" : "",
       "name" : "4. Update artboard names",
       "identifier" : "updateArtboardName"
+    },{
+      "script" : "script.js",
+      "handler" : "deleteArtboardNames",
+      "shortcut" : "",
+      "name" : "5. Delete artboard names",
+      "identifier" : "deleteArtboardName"
     }
   ],
   "menu" : {
@@ -35,12 +41,13 @@
       "addArtboardName",
       "hideArtboardName",
       "showArtboardName",
-      "updateArtboardName"
+      "updateArtboardName",
+      "deleteArtboardName"
     ],
     "title" : "Stamp Artboard Name"
   },
   "identifier" : "com.example.sketch.stampArtboardName",
-  "version" : "0.1",
+  "version" : "0.2",
   "description" : "",
   "authorEmail" : "",
   "name" : "Stamp artboard name"
