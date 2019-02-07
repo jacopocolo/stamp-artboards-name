@@ -1,0 +1,57 @@
+{
+  "name": "Add artboard labels",
+  "description": "A plugin to add, hide, delete, update artboard labels",
+  "author": "Jacopo Colò",
+  "homepage": "https://",
+  "version": "1.0",
+  "identifier": "com.jacopocolo.labels",
+  "appcast": "https://example.org/template-plugin-appcast.xml",
+  "icon": "icon.png",
+  "compatibleVersion": "49",
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "script" : "script.js",
+      "handler" : "addLabels",
+      "shortcut" : "",
+      "name" : "1. Add labels",
+      "identifier" : "addLabels"
+    },
+    {
+      "script" : "script.js",
+      "handler" : "hideLabels",
+      "shortcut" : "",
+      "name" : "2. Hide labels",
+      "identifier" : "hideLabels"
+    },
+    {
+      "script" : "script.js",
+      "handler" : "showLabels",
+      "shortcut" : "",
+      "name" : "3. Show labels",
+      "identifier" : "showLabels"
+    },
+    {
+      "script" : "script.js",
+      "handler" : "updateLabels",
+      "shortcut" : "",
+      "name" : "4. Update labels",
+      "identifier" : "updateLabels"
+    },{
+      "script" : "script.js",
+      "handler" : "deleteLabels",
+      "shortcut" : "",
+      "name" : "5. Delete labels",
+      "identifier" : "deleteLabels"
+    }
+  ],
+  "menu": {
+    "items": [
+      "addLabels",
+      "hideLabels",
+      "showLabels",
+      "updateLabels",
+      "deleteLabels"
+    ]
+  }
+}
