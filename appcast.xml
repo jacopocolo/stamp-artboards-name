@@ -14,7 +14,7 @@
             </ul>
           ]]>
         </description>
-        <enclosure url="YOUR ZIP RELEASE URL" sparkle:version="1.0" />
+        <enclosure url="https://github.com/jacopocolo/stamp-artboards-name/releases/download/1.0/artboard-labels.sketchplugin.1.0.zip" sparkle:version="1.0" />
       </item>
   </channel>
 </rss>

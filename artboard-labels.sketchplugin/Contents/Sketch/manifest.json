@@ -1,5 +1,5 @@
 {
-  "name": "Add artboard labels",
+  "name": "Artboard labels",
   "description": "A plugin to add, hide, delete, update artboard labels",
   "author": "Jacopo Colò",
   "homepage": "https://",
@@ -12,46 +12,47 @@
   "commands": [
     {
       "script" : "script.js",
-      "handler" : "addLabels",
+      "handler" : "generateLabels",
       "shortcut" : "",
-      "name" : "1. Add labels",
-      "identifier" : "addLabels"
+      "name" : "1. Generate labels",
+      "identifier" : "generateLabels"
     },
     {
       "script" : "script.js",
       "handler" : "hideLabels",
       "shortcut" : "",
-      "name" : "2. Hide labels",
+      "name" : "2. Hide labels 🙈",
       "identifier" : "hideLabels"
     },
     {
       "script" : "script.js",
       "handler" : "showLabels",
       "shortcut" : "",
-      "name" : "3. Show labels",
+      "name" : "3. Show labels 🐵",
       "identifier" : "showLabels"
     },
     {
       "script" : "script.js",
-      "handler" : "updateLabels",
-      "shortcut" : "",
-      "name" : "4. Update labels",
-      "identifier" : "updateLabels"
-    },{
-      "script" : "script.js",
       "handler" : "deleteLabels",
       "shortcut" : "",
-      "name" : "5. Delete labels",
+      "name" : "4. Delete labels",
       "identifier" : "deleteLabels"
+    },
+    {
+      "script" : "script.js",
+      "handler" : "editPreferences",
+      "shortcut" : "",
+      "name" : "5. Edit preferences",
+      "identifier" : "editPreferences"
     }
   ],
   "menu": {
     "items": [
-      "addLabels",
+      "generateLabels",
       "hideLabels",
       "showLabels",
-      "updateLabels",
-      "deleteLabels"
+      "deleteLabels",
+      "editPreferences"
     ]
   }
 }
